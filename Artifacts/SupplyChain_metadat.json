@@ -1,0 +1,463 @@
+{
+	"compiler": {
+		"version": "0.8.22+commit.4fc1097e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "farmerAddress",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "farmerKey",
+						"type": "string"
+					}
+				],
+				"name": "farmerAddition",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "inspectoAddress",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "inspectoKey",
+						"type": "string"
+					}
+				],
+				"name": "inspectorAddition",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "processorAddress",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "processorKey",
+						"type": "string"
+					}
+				],
+				"name": "processorAddition",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "retailerAddress",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "retailerKey",
+						"type": "string"
+					}
+				],
+				"name": "retailerAddition",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_batchNumber",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_lotNumber",
+						"type": "string"
+					}
+				],
+				"name": "BatchtoLot",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_farmer",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "_farmerKey",
+						"type": "string"
+					}
+				],
+				"name": "addFarmer",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_inspector",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "_inspectorKey",
+						"type": "string"
+					}
+				],
+				"name": "addInspector",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_processor",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "_processorKey",
+						"type": "string"
+					}
+				],
+				"name": "addProcessor",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_processor",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_farmer",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "_lotNumber",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_remarks",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_receivedShipment",
+						"type": "string"
+					}
+				],
+				"name": "addProcessorReport",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_farmer",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_inspector",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "_lotNumber",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_remarks",
+						"type": "string"
+					},
+					{
+						"internalType": "int256",
+						"name": "_sampleSize",
+						"type": "int256"
+					},
+					{
+						"internalType": "int256",
+						"name": "_quantity",
+						"type": "int256"
+					},
+					{
+						"internalType": "int256",
+						"name": "_defective",
+						"type": "int256"
+					}
+				],
+				"name": "addQualityReport",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_retailer",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "_retailerKey",
+						"type": "string"
+					}
+				],
+				"name": "addRetailer",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_retailer",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_processor",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_farmer",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "_remarks",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_rawMaterial",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_productName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_manufacturedDate",
+						"type": "string"
+					},
+					{
+						"internalType": "int256",
+						"name": "_quantity",
+						"type": "int256"
+					},
+					{
+						"internalType": "string",
+						"name": "_batchNumber",
+						"type": "string"
+					}
+				],
+				"name": "addRetailerReport",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_processor",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_farmer",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "_lotNumber",
+						"type": "string"
+					}
+				],
+				"name": "getProcessorReport",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "_remarks",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_receivedShipment",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_farmer",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "_lotNumber",
+						"type": "string"
+					}
+				],
+				"name": "getQualityReport",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "_remarks",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "_inspector",
+						"type": "address"
+					},
+					{
+						"internalType": "int256",
+						"name": "_sampleSize",
+						"type": "int256"
+					},
+					{
+						"internalType": "int256",
+						"name": "_defective",
+						"type": "int256"
+					},
+					{
+						"internalType": "int256",
+						"name": "_quantity",
+						"type": "int256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_retailer",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "_batchNumber",
+						"type": "string"
+					}
+				],
+				"name": "getRetailerReport",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "_productName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_remarks",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_rawMaterial",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_manufacturedDate",
+						"type": "string"
+					},
+					{
+						"internalType": "int256",
+						"name": "_quantity",
+						"type": "int256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"supplychain.sol": "SupplyChain"
+		},
+		"evmVersion": "byzantium",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"supplychain.sol": {
+			"keccak256": "0xf24abea9e1736436ee18792edb02415f6060943b45fb7e4d788d3d0772994dc9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7e29691f273605f2712abad6769d1b5fd966d7b0d71bb60102ab2253b11be04c",
+				"dweb:/ipfs/QmdNvHE8TYh5JnY5vsF6BGdkoRB4sGzm6a7NRzgipsLX7K"
+			]
+		}
+	},
+	"version": 1
+}
