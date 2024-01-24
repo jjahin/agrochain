@@ -44,6 +44,6 @@ User Onboarding: Streamline the onboarding process by integrating with existing 
 
 Government Subsidies: Explore opportunities for integrating government subsidies into the microfinance system.
 
-Tech PPT: 
+Tech PPT: https://1drv.ms/p/s!AkfRSTXyuuzlkVPUpJFCWfTG8zQ_?e=cAIYqf
 
 Business PPT: https://1drv.ms/p/s!AkfRSTXyuuzlkVJ_3ybz2J3uPGKV?e=Fh9Q7p
